@@ -1,0 +1,39 @@
+.archive {
+	
+	.page-header {
+		border-bottom: 1px solid rgba($primary_color, 0.1);
+		margin-bottom: 0;
+		margin-top: 0;
+		padding-bottom: 50px;
+
+		.sub-title {
+			font-size: 0.6666em;
+			text-transform: uppercase;
+			font-weight: 700;
+			letter-spacing: 1px;
+			color: #999;
+		}
+
+		.page-title {
+			margin-bottom: 0;
+			margin-top: 0;
+			font-size: 3.33335em;
+		}//.page-title
+
+		.result-count {
+			margin-top: 15px;
+		}
+	}//.page-header
+}//.archive
+
+@include media(xs) {
+	.archive {
+
+		.page-header {
+			
+			.page-title {
+				font-size: 2.2223em;
+			}//.page-title
+		}//.page-header
+	}//.archive
+}//@include media(xs)

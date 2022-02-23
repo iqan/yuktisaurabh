@@ -1,0 +1,159 @@
+section.about-section {
+	margin-bottom: 25px;
+	
+	.container {
+		display: flex;
+		flex: 1;
+		flex-wrap: wrap;
+		align-items: center;
+	}//.container
+
+	.widget {
+		width: calc((100% - 570px)/2);
+
+		&:first-child {
+			text-align: right;
+			padding-right: 30px;
+
+			.widget-title {
+				text-align: right;
+				
+				svg {
+					margin-right: 0;
+				}
+			}//.widget-title
+		}//&:first-child
+
+		&:last-child {
+			padding-left: 30px;
+
+			.widget-title {
+				text-align: left;
+				
+				svg {
+					margin-left: 0;
+				}
+			}//.widget-title
+		}//&:last-child
+
+		&.widget_media_image {
+			width: 570px;
+			text-align: center;
+			padding-left: 25px;
+			padding-right: 25px;
+
+			img {
+				border-radius: 100%;
+				background-image: url("images/abstract-circle.png");
+				padding: 20px;
+				width: 512px;
+				height: 512px !important;
+				object-fit: contain;
+				background-repeat: no-repeat;
+				background-size: 98%;
+				background-position: center;
+				object-fit: cover;
+
+			}
+		}//.widget_media_image
+
+		.widget-title {
+			font-size: 2em;
+		}//.widget-title
+	}//.widget
+
+	+ section[class*="-section"] {
+		margin-top: 25px;
+	}
+}//section.about-section
+
+@include media(md) {
+	section.about-section {
+
+		.widget {
+
+			&:first-child {
+				padding-right: 10px;
+			}
+
+			&:last-child {
+				padding-left: 10px;
+			}
+		}//.widget
+	}//section.about-section
+}//@include media(md)
+
+@include media(sm) {
+	
+	section.about-section {
+
+		.widget {
+			width: calc((100% - 320px)/2);
+
+			&.widget_media_image {
+				width: 320px;
+				padding-left: 15px;
+				padding-right: 15px;
+
+				img {
+					padding: 10px;
+				    width: 290px;
+				    height: 290px !important;
+				}
+			}//.widget_media_image
+		}//.widget
+	}//section.about-section
+}//@include media(sm)
+
+@include media(xs) {
+	
+	section.about-section {
+		margin-bottom: 5px;
+
+		.container {
+			flex-direction: column;
+		}//.container
+
+		.widget {
+			width: 100%;
+			padding: 0;
+
+			&:first-child {
+				text-align: center;
+				padding-right: 0;
+
+				.widget-title {
+					text-align: center;
+
+					svg {
+						margin-right: auto;
+					}
+		    	}//.widget-title
+		    }//&:first-child
+
+		    &:last-child {
+		    	text-align: center;
+		    	padding-left: 0;
+
+		    	.widget-title {
+		    		text-align: center;
+
+		    		svg {
+		    			margin-left: auto;
+		    		}
+		    	}//.widget-title
+		    }//&:last-child
+
+		    &.widget_media_image {
+		    	width: auto;
+		    	padding-left: 0;
+		    	padding-right: 0;
+		    }//.widget_media_image
+		    
+		}//.widget
+
+		+ section[class*="-section"] {
+			margin-top: 5px;
+		}
+	}//section.about-section
+}//@include media(xs)

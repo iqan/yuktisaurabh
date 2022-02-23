@@ -1,0 +1,19 @@
+//background gradient
+@mixin background-gradient($gradients...){
+	background: $primary_color;
+	-webkit-background-image: $gradients;
+	-moz-background-image: $gradients;
+	-ms-background-image: $gradients;
+	-o-background-image: $gradients;
+	background-image: $gradients;
+}
+
+//linear gradient
+@mixin linear-gradient($color-start, $color-end) {
+	@include background-gradient(linear-gradient($color-start, $color-end));
+}
+
+//radial-gradient
+@mixin radial-gradient($color-start, $color-end) {
+	@include background-gradient(radial-gradient($color-start, $color-end));
+}

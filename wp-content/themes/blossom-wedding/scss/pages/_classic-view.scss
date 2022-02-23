@@ -1,0 +1,123 @@
+.classic-view {
+	
+	.site-main {
+		
+		article {
+			margin-bottom: 65px;
+			padding-bottom: 65px;
+			border-bottom: 1px solid rgba($primary_color, 0.3);
+			text-align: center;
+
+			.content-wrap {
+				background: rgba($white_color, 0.97);
+				width: calc(100% - 60px);
+				margin: 0 auto;
+				padding: 0 75px;
+				position: relative;
+
+				&::before {
+					content: "";
+					background: rgba($white_color, 0.97);
+					width: 100%;
+					height: 75px;
+					position: absolute;
+					top: -75px;
+					left: 0;
+				}
+
+			}//.content-wrap
+
+			.entry-meta {
+				margin-bottom: 10px;
+
+				> span {
+					font-size: 0.6666em;
+					text-transform: uppercase;
+					font-weight: 700;
+					color: #999;
+					letter-spacing: 1px;
+
+					a {
+						color: #999;
+
+						&:hover {
+							color: $primary_color;
+						}
+					}
+				}
+			}//.entry-meta
+
+			.entry-title {
+				font-size: 1.6667em;
+				position: relative;
+				padding-bottom: 30px;
+
+				&:after {
+					content: "";
+					background-image: url('data:image/svg+xml; utf-8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 0 86 12"><g transform="translate(-8.2 -9.1)"><path fill="none" stroke="' + svg-color-string-modifier($primary_color) + '" stroke-width="2px" d="M49.2,15.1,14.929,20m0,0c-.3,0-.6.1-.8.1a5,5,0,1,1,4.925-5" transform="translate(0 0)"/><g transform="translate(49.2 10.1)"><path fill="none" stroke="' + svg-color-string-modifier($primary_color) + '" stroke-width="2px" d="M49,15.1l34.271-4.9m0,0c.3,0,.6-.1.8-.1a5,5,0,1,1-4.925,5" transform="translate(-49 -10.1)"/></g></g></svg>');
+					background-repeat: no-repeat;
+					width: 80px;
+					height: 10px;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					margin: 0 auto;
+				}
+			}//.entry-title
+
+			.entry-footer {
+				margin-top: 20px;
+			}
+
+			.btn-readmore {
+				padding: 0;
+				background: none;
+				color: $primary_color;
+				font-size: 0.7778em;
+				border-bottom: 1px solid;
+				line-height: 1.3em;
+
+				&:hover {
+					color: $black_color;
+				}
+
+				+ .edit-link {
+					margin-left: 20px;
+					display: block;
+					vertical-align: middle;
+				}
+
+			}//.btn-readmore
+		}//article
+	}//.site-main
+}//.classic-view
+
+@include media(xs) {
+	.classic-view {
+		
+		.site-main {
+			
+			article {
+				margin-bottom: 45px;
+				padding-bottom: 45px;
+				
+				.content-wrap {
+					padding-left: 25px;
+					padding-right: 25px;
+					width: calc(100% - 15px);
+					
+					&::before {
+						height: 30px;
+						top: -30px;
+					}
+					
+				}//.content-wrap
+
+				.entry-title {
+					font-size: 1.2223em;
+				}
+			}//article
+		}//.site-main
+	}//.classic-view
+}//@include media(xs)

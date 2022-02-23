@@ -1,0 +1,354 @@
+
+
+/* preloader */
+            .ggl_1, .ggl_2, .ggl_3, .ggl_4 {
+                background-color: #aaaaaa;
+                width: 12px;
+                height: 12px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                
+                -webkit-transform-origin: 	0 50%;
+                -ms-transform-origin: 		0 50%;
+                transform-origin: 			0 50%;	
+                
+                -webkit-animation: 	gg_loader 1.7s infinite ease-in-out;
+                animation: 			gg_loader 1.7s infinite ease-in-out;
+                
+                -webkit-transform: 	rotateX(90deg);
+                -ms-transform: 		rotateX(90deg);
+                transform: 			rotateX(90deg);	
+            }
+            .ggl_2 {
+                top: 0;
+                left: 14px;
+                -webkit-animation-delay: 0.2s;
+                animation-delay: 0.2s;
+            }
+            .ggl_3 {
+                top: 14px;
+                left: 14px;
+                -webkit-animation-delay: 0.4s;
+                animation-delay: 0.4s;
+            }
+            .ggl_4 {
+                top: 14px;
+                left: 0px;
+                -webkit-animation-delay: 0.6s;
+                animation-delay: 0.6s;
+            }
+            @-webkit-keyframes gg_loader {
+                20%, 80%, 100% {-webkit-transform: rotateX(90deg);}
+                40%, 60% {-webkit-transform: rotateX(0deg);}
+            }
+            @keyframes gg_loader {
+                20%, 80%, 100% {transform: rotateX(90deg);}
+                40%, 60% {transform: rotateX(0deg);}
+            }
+            
+
+
+/* image border, radius and shadow */
+.gg_standard_gallery .gg_img,
+.gg_columnized_gallery .gg_img,
+.gg_masonry_gallery .gg_img_inner,
+.gg_string_gallery .gg_img,
+.gg_itg_container .gg_img,
+.gg_coll_img {
+	border: 4px solid #fafafa;background-color: #fafafa;    
+    border-radius: 2px;	
+	}
+
+
+.gg_ol_full_mode .gg_img_title {
+	border-color: rgba(68,68,68, 0.15); 
+	background: rgba(253,253,253, 0.4);
+
+		
+}
+
+
+
+/* collections - texts under images */
+.gg_coll_img .gg_main_overlay_under .gg_img_title_under {
+	color: #444444;
+}
+.gg_coll_img .gg_main_overlay_under .gg_img_descr_under {
+	color: #686868;
+}
+
+
+
+.gg_filter,
+.gg_tags_wrap {
+	text-align: center; 
+}
+.gg_filter a.ggf,
+.gg_tag,
+.gg_coll_back_to_new_style,
+.gg_gall_search_form input {	
+	color: #444444;
+    font-size: 15px;
+    
+        padding: 6px 12px;
+}
+.gg_filter a.ggf:hover,
+.gg_tag:hover,
+.gg_coll_back_to_new_style:hover {	
+	color: #666666 !important;
+}
+.gg_filter a.ggf.gg_cats_selected,
+.gg_filter a.ggf.gg_cats_selected:hover,
+.gg_tag.gg_tag_sel,
+.gg_tag.gg_tag_sel:hover {	
+	color: #333333 !important;
+}
+.gg_textual_filters .gg_cats_selected:after,
+.gg_textual_filters .gg_tag_sel {
+	text-shadow: 0 0.01em 0 #333333;
+}
+
+.gg_btn_filters a.ggf,
+.gg_btn_filters .gg_tag,
+.gg_coll_back_to_new_style,
+select.gg_mobile_filter_dd,
+.gg_gall_search_form input {	
+	background-color: #ffffff;
+    border: 1px solid #999999;
+    border-radius: 2px;
+}
+.gg_btn_filters a.ggf:hover,
+.gg_btn_filters .gg_tag:hover,
+.gg_coll_back_to_new_style:hover {	
+	background-color: #ffffff;
+    border-color: #666666;
+}
+.gg_btn_filters a.ggf.gg_cats_selected,
+.gg_btn_filters a.ggf.gg_cats_selected:hover,
+.gg_btn_filters .gg_tag.gg_tag_sel,
+.gg_btn_filters .gg_tag.gg_tag_sel:hover {	
+	background-color: #f0f0f0;
+    border-color: #555555;
+}
+.gg_textual_filters .ggf:after,
+.gg_textual_filters .gg_tag:after {
+	background-color: #f0f0f0;
+}
+
+
+
+
+.gg_gall_search_form input,
+.gg_gall_search_form i {
+	color: #707070;
+}
+.gg_gall_search_form input {
+	background: #f5f5f5;
+    border-color: #f1f1f1;
+}
+.gg_gall_search_form:hover input,
+.gg_gall_search_form:hover i,
+.gg_gall_search_form:active input,
+.gg_gall_search_form:active i,
+.gg_gall_search_form:focus input,
+.gg_gall_search_form:focus i {
+	color: #5e5e5e;
+}
+.gg_gall_search_form:hover input,
+.gg_gall_search_form:active input,
+.gg_gall_search_form:focus input {
+	background: #ffffff;
+    border-color: #707070;
+}
+
+
+
+
+.gg_standard_pag i,
+.gg_num_btns_wrap > div {
+	color: #707070;
+}
+.gg_standard_pag:not(.gg_detach_arr),
+.gg_standard_pag.gg_detach_arr > div,
+.gg_infinite_scroll,
+.gg_num_btns_wrap > div {
+	border: 1px solid #f5f5f5;
+	background: #f5f5f5;
+}
+.gg_standard_pag:not(.gg_only_arr) .gg_nav_mid,
+.gg_infinite_scroll div {
+	color: #707070;
+}
+.gg_standard_pag.gg_monoblock:before {
+	background: #f5f5f5;
+}
+.gg_dots_pag_wrap > div {
+	background: #f5f5f5;
+}
+
+.gg_standard_pag:not(.gg_only_arr) > div:not(.gg_nav_mid):not(.gg_pag_disabled):hover,
+.gg_infinite_scroll:hover,
+.gg_standard_pag.gg_only_arr > div:not(.gg_pag_disabled):hover,
+.gg_num_btns_wrap > div:hover,
+.gg_num_btns_wrap .gg_pag_disabled {
+	background: #f0f0f0;
+}
+.gg_standard_pag:not(.gg_only_arr) > div:not(.gg_nav_mid):not(.gg_pag_disabled):hover i,
+.gg_standard_pag.gg_only_arr > div:not(.gg_pag_disabled):hover i,
+.gg_infinite_scroll:hover span,
+.gg_num_btns_wrap > div:hover,
+.gg_num_btns_wrap .gg_pag_disabled  {
+	color: #5e5e5e;	
+}
+.gg_infinite_scroll:hover,
+.gg_standard_pag.gg_only_arr > div:not(.gg_pag_disabled):hover,
+.gg_monoblock > div:not(.gg_pag_disabled):hover,
+.gg_infinite_scroll:hover,
+.gg_num_btns_wrap > div:hover, 
+.gg_num_btns_wrap .gg_pag_disabled {
+	border: 1px solid  #999999;	
+}
+.gg_dots_pag_wrap > div:hover,
+.gg_dots_pag_wrap > div.gg_pag_disabled {	
+	box-shadow: 0 -13px 0 0 #f0f0f0 inset;
+}
+
+
+
+/* ************************************************** */
+
+
+/* standard gallery images */
+.gg_standard_gallery .gg_container {
+	width: calc(100% + 10px);
+}
+.gg_standard_gallery .gg_img {
+	margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/* columnized gallery images */
+.gg_columnized_gallery .gg_container {
+	width: calc(100% + 10px);
+}
+.gg_columnized_gallery .gg_img {
+	margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/* masonry gallery images */
+.gg_masonry_gallery .gg_container {
+	width: calc(100% + 7px);
+}
+.gg_masonry_gallery .gg_img {
+    padding-right: 7px;
+    margin-bottom: 7px;
+}
+
+/* photostring gallery images */
+.gg_string_gallery .gg_container {
+	width: calc(100% + 7px + 1px); /* 1px = security addition */
+}
+.gg_string_gallery .gg_img {
+	margin-right: 7px;
+    margin-bottom: 7px;
+}
+
+/* image-to-gallery images */
+.gg_itg_wrap:not(.gg_itg_monoimage) .gg_itg_img:nth-child(odd) {
+	width: calc(50% - 5px);
+    margin-right: 10px;
+}
+.gg_itg_wrap:not(.gg_itg_monoimage) .gg_itg_img:nth-child(even) {
+	width: calc(50% - 5px);
+}
+.gg_itg_wrap .gg_itg_img:nth-of-type(3),
+.gg_itg_wrap .gg_itg_img:nth-of-type(4) {
+	margin-top: 10px;
+}
+.gg_itg_wrap .gg_itg_ol_inner {
+	color: #fefefe;
+}
+.gg_itg_corner_txt .gg_itg_ol_inner,
+.gg_itg_main_n_sides .gg_itg_ol_inner {
+	background-color: rgba(51,51,51, 0.75);
+}
+.gg_itg_50_op_ol .gg_itg_ol {
+	background-color: rgba(51,51,51, 0.5);
+}
+.gg_itg_100_op_ol .gg_itg_ol,
+.gg_itg_block_over .gg_itg_ol_inner { 
+    background-color: #333333;
+}
+
+
+
+
+/* COLLECTION IMAGES */
+.gg_coll_container {
+	width: calc(100% + 10px);
+}
+.gg_coll_img_wrap {
+	margin-bottom: 10px;
+	padding-right: 10px;
+}
+.gg_coll_pag_wrap {
+	margin-top: -10px;
+}
+
+
+
+/* CAROUSEL */
+.gg_car_item_wrap {
+	padding-right: 5px;
+	padding-left: 5px;
+    padding-top: 5px;
+	padding-bottom: 5px;
+}
+.gg_carousel_wrap.slick-slider {
+	margin-bottom: 55px;
+}
+
+/* pagination button alignment */
+.gg_paginate {
+	text-align: center;
+}
+
+
+/* ************************************************** */
+
+
+.gg_galleria_slider_wrap .galleria-gg-toggle-thumb {
+	display: none !important;
+}
+
+
+.gg_galleria_slider_wrap .galleria-thumbnails .galleria-image {
+	width: 60px !important;
+}
+.gg_galleria_slider_wrap .galleria-thumbnails .galleria-image,
+.gg_galleria_slider_wrap .galleria-thumbnails-container {
+     height: 40px !important;
+}
+.gg_galleria_slider_wrap.gg_galleria_slider_show_thumbs {
+	padding-bottom: 54px !important;	
+}
+.gg_galleria_slider_show_thumbs .galleria-thumbnails-container {
+	bottom: -52px !important;		
+}
+
+/* ************************************************** */
+
+.gg_lc_ol#lightcase-overlay {
+	background-color: #333333 !important;
+    
+    
+		background-image: url(https://yuktisaurabh.com/wp-content/plugins/global-gallery/js/lightboxes/lc-lightbox/img/patterns/.png) !important;
+		background-position: top left !important;
+		background-repeat: repeat !important;
+		}
+
+
+
+
