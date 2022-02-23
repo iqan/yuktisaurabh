@@ -1,0 +1,69 @@
+.search {
+
+	.page-header {
+		border-bottom: 1px solid rgba($black_color, 0.1);
+		margin-bottom: 50px;
+		padding-bottom: 50px;
+
+		.page-title {
+			margin-top: 0;
+			margin-bottom: 10px;
+			font-size: 0.6666em;
+			color: #999;
+			letter-spacing: 1px;
+		}//.page-title
+
+		.search-form {
+			border-bottom: 2px solid rgba($black_color, 0.15);
+
+			.search-field {
+				border: none;
+				padding-left: 0;
+				height: 80px;
+				font-size: 3.3335em;
+				font-weight: 700;
+				line-height: 1.25em;
+			}//.search-field
+
+			.search-submit {
+				height: 80px;
+				background-color: transparent;
+				text-indent: 100px;
+				background-image: url('data:image/svg+xml; utf-8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="' + svg-color-string-modifier($black_color) + '" d="M508.5 468.9L387.1 347.5c-2.3-2.3-5.3-3.5-8.5-3.5h-13.2c31.5-36.5 50.6-84 50.6-136C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c52 0 99.5-19.1 136-50.6v13.2c0 3.2 1.3 6.2 3.5 8.5l121.4 121.4c4.7 4.7 12.3 4.7 17 0l22.6-22.6c4.7-4.7 4.7-12.3 0-17zM208 368c-88.4 0-160-71.6-160-160S119.6 48 208 48s160 71.6 160 160-71.6 160-160 160z"></path></svg>');
+				background-size: 25px;
+
+				&:hover {
+					background-image: url('data:image/svg+xml; utf-8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="' + svg-color-string-modifier($primary_color) + '" d="M508.5 468.9L387.1 347.5c-2.3-2.3-5.3-3.5-8.5-3.5h-13.2c31.5-36.5 50.6-84 50.6-136C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c52 0 99.5-19.1 136-50.6v13.2c0 3.2 1.3 6.2 3.5 8.5l121.4 121.4c4.7 4.7 12.3 4.7 17 0l22.6-22.6c4.7-4.7 4.7-12.3 0-17zM208 368c-88.4 0-160-71.6-160-160S119.6 48 208 48s160 71.6 160 160-71.6 160-160 160z"></path></svg>');
+				}
+			}
+		}//.search-form
+	}//.page-header
+
+	.no-results {
+
+		.search-form {
+			display: none;
+		}
+
+	}//.no-results
+
+}//.search
+
+@include media(xs) {
+	.search {
+		.page-header {
+			
+			.search-form {
+				
+				.search-field {
+					height: 60px;
+					font-size: 2.2223em;
+				}//.search-field
+
+				.search-submit {
+					height: 60px;
+				}//.search-submit
+			}//.search-form
+		}//.page-header
+	}//.search
+}//@include media(xs)

@@ -1,0 +1,19 @@
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+  
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+  
+  @return $string;
+}
+
+@function svg-color-string-modifier($svg-color: false) {
+    // Checking if a color value has been passed down     
+    @if($svg-color != false) {
+        $svg-color-str: quote(#{$svg-color}); // Adding quotes around Hex value so its actually a string
+        $svg-color: str-replace($svg-color-str, "#", "%23"); // if the color has a "#" at the start it will be removed from the string
+
+        @return "#{$svg-color}";
+    }
+}

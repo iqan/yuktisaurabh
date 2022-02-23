@@ -1,0 +1,17 @@
+.btn-primary{
+	background: $primary_color;
+	color: $white_color;
+	font-weight: 500;
+	@include border-radius(4px);
+	display: inline-block;
+	padding: 15px 25px;
+	border: 1px solid  $primary_color;
+	@include transition(ease, 0.2s);
+
+	&:hover,
+	&:focus{
+		text-decoration: none;
+		color: $primary_color;
+		background: none;
+	}
+} /*btn-primary*/

@@ -1,0 +1,16 @@
+section.gallery-section {
+	margin-bottom: 70px;
+	
+	.widget:last-child {
+		margin-bottom: 0;
+	}
+
+}//section.gallery-section
+
+.photoblocks-gallery .pb-block .pb-link {
+	top: 1px;
+	right: 1px;
+	bottom: 1px;
+	left: 1px;
+	color: initial;
+}
